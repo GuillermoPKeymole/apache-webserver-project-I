@@ -34,7 +34,7 @@ The project involved setting up and securing an Apache web server using AlmaLinu
 
 📄 **Documents**
 - [`Project Report`](./Guillermo_PadillaKeymole_Report_P1.pdf)
-- [`Project Instructions`](./Projet-Part I_Apache.pdf)
+- [`Project Instructions`](https://github.com/GuillermoPKeymole/apache-webserver-project1/blob/main/Projet-Part%20I_Apache.pdf)
 - [`Original .tar archive`](./guillermopk_project1.tar)
 
 ---
