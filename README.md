@@ -12,25 +12,28 @@ The project involved setting up and securing an Apache web server using AlmaLinu
 - ✅ 4 project directories with `.txt`, `.gif`, `.html`, and `test.html` access rules
 - ✅ Departmental directories with Aliases and access rules (vendors, accountants, etc.)
 
-## 📄 Files Included
+## 📂 Project Structure
+
+- [`httpd.conf`](./httpd.conf) – Apache server configuration
+- [`html_project1/`](./html_project1) – Homepage and public site content
+- [`htdocs/`](./htdocs) – Project and department directories (Project1–4, vendors, etc.)
+
+## 📄 Additional Files
 
 - `Guillermo_PadillaKeymole_Report_P1.pdf` – Final documented report with screenshots
-- `Projet-Part I_Apache.pdf` – Project instructions
-- `guillermopk_project1.tar` – Archive with:
-  - `/etc/httpd/conf/httpd.conf`
-  - `/var/www/html_project1/`
-  - `/var/www/htdocs/`
+- `Projet-Part I_Apache.pdf` – Official project instructions
+- `guillermopk_project1.tar` – Archived backup of the full config and project directories
 
 ## 🔐 Features Demonstrated
 
 - Apache directives: `<Directory>`, `.htaccess`, `RequireAll`, `RequireAny`
-- Subnet and user authentication
-- File-based access restrictions (`.txt`, `secret.*`, `*.gif`, etc.)
-- Virtual hosting and alias configuration
-- Bash scripting and firewall configuration
-- Testing via browser + IP-based simulations
+- Subnet-based and user-based access control
+- File-level restrictions using `.txt`, `secret.*`, `*.gif`, etc.
+- Virtual hosting and alias setup
+- Bash scripting and firewall validation
+- Tested from multiple subnets and browsers
 
-## 📍 Author
+## 👨‍💻 Author
 
 **Guillermo Padilla Keymole**  
 Network Administration AEC Student  
