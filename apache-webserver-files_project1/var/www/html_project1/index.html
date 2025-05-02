@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to the Apache Web Project</title>
+</head>
+<body>
+  <h1>Project Part I - Homepage</h1>
+  <hr>
+
+  <!-- Task 2 – Authentication -->
+  <h2>Task 2 – Authentication</h2>
+  <ul>
+    <li><a href="http://192.168.50.10/secure1">secure1 – user01 from any subnet (allow)</a></li>
+    <li><a href="http://192.168.50.10/secure2">secure2 – user01 from 192.168.50.0/24 (allow)</a></li>
+    <li><a href="http://10.35.16.1/secure2">secure2 – user01 from 10.35.16.0/24 (deny)</a></li>
+    <li><a href="http://192.168.50.10/secure3">secure3 – user01 OR 192.168.50.0/24 (allow)</a></li>
+    <li><a href="http://10.35.16.1/secure3">secure3 – user01 from other subnet (allow)</a></li>
+    <li><a href="http://192.168.50.10/secure4">secure4 – user02 only (allow)</a></li>
+    <li><a href="http://192.168.50.10/secure5">secure5 – user01 via .htaccess (allow)</a></li>
+    <li><a href="http://192.168.50.10/secure6">secure6 – user01 from 192.168.50.0/24 (allow)</a></li>
+    <li><a href="http://10.35.16.1/secure6">secure6 – user01 from 10.35.16.0/24 (deny)</a></li>
+    <li><a href="http://192.168.50.10/secure7">secure7 – user01 OR 192.168.50.0/24 (allow)</a></li>
+    <li><a href="http://10.35.16.1/secure7">secure7 – neither user01 nor subnet (deny)</a></li>
+  </ul>
+
+  <!-- Task 3 – Accessibility -->
+  <h2>Task 3 – Accessibility</h2>
+
+<h3>Task 3 - Project 1:</h3>
+<ul>
+    <li><a href="http://192.168.50.10/Project1">Project1 (192.168.50.10 - All is accessible)</a></li>
+    <li><a href="http://10.35.16.1/Project1">Project1 (10.35.16.1 accessible except files secret.* and *.txt)</a></li>
+    <li><a href="http://10.35.17.1/Project1">Project1 (10.35.17.1 accessible except files secret.* and *.txt)</a></li>
+    <li><a href="http://192.168.100.1/Project1">Project1 (192.168.100.1 Not accessible)</a></li>
+</ul>
+
+<h3>Task 3 - Project 2:</h3>
+<ul>
+    <li><a href="http://192.168.50.10/Project2">Project2 (192.168.50.10 - All is accessible)</a></li>
+    <li><a href="http://10.35.16.1/Project2">Project2 (10.35.16.1 Not accessible)</a></li>
+    <li><a href="http://10.35.17.1/Project2">Project2 (10.35.17.1 accessible except files *.txt)</a></li>
+    <li><a href="http://192.168.100.1/Project2">Project2 (192.168.100.1 accessible except files *.txt)</a></li>
+</ul>
+
+<h3>Task 3 - Project 3:</h3>
+<ul>
+    <li><a href="http://192.168.50.10/Project3">Project3 (192.168.50.10 - All is accessible)</a></li>
+    <li><a href="http://10.35.16.1/Project3">Project3 (10.35.16.1 Not accessible)</a></li>
+    <li><a href="http://10.35.17.1/Project3">Project3 (10.35.17.1 Not accessible)</a></li>
+    <li><a href="http://192.168.100.1/Project3">Project3 (192.168.100.1 accessible except files *.gif and *.txt)</a></li>
+</ul>
+
+<h3>Task 3 - Project 4:</h3>
+<ul>
+    <li><a href="http://192.168.50.10/Project4">Project4 (192.168.50.10 - All is accessible)</a></li>
+    <li><a href="http://10.35.16.1/Project4">Project4 (10.35.16.1 accessible except files test.html)</a></li>
+    <li><a href="http://10.35.17.1/Project4">Project4 (10.35.17.1 Not accessible)</a></li>
+    <li><a href="http://192.168.100.1/Project4">Project4 (192.168.100.1 accessible except files test.html)</a></li>
+</ul>
+
+<!-- Task 4 – Authorization -->
+<h2>Task 4 – Authorization</h2>
+
+<h3>Vendors website:</h3>
+<ul>
+    <li><a href="http://10.50.1.1/vendors">Accessible to Vendors (10.50.1.0/24)</a></li>
+    <li><a href="http://10.51.1.1/vendors">Not accessible to Accountants (10.51.1.0/24)</a></li>
+    <li><a href="http://10.52.1.1/vendors">Accessible to Administrators (10.52.1.0/24)</a></li>
+    <li><a href="http://10.53.1.1/vendors">Accessible to Programmers (10.53.1.0/24) but not *.gif and *.jpg files</a></li>
+</ul>
+
+<h3>Accountants website:</h3>
+<ul>
+    <li><a href="http://10.50.1.1/accountants">Not accessible to Vendors (10.50.1.0/24) </a></li>
+    <li><a href="http://10.51.1.1/accountants">Accessible to Accountants (10.51.1.0/24) but not *.html files</a></li>
+    <li><a href="http://10.52.1.1/accountants">Accessible to Administrators (10.52.1.0/24)</a></li>
+    <li><a href="http://10.53.1.1/accountants">Accessible to Programmers (10.53.1.0/24) but not *.gif and *.jpg files</a></li>
+</ul>
+
+<h3>Programmers website:</h3>
+<ul>
+    <li><a href="http://10.50.1.1/programmers">Not accessible to Vendors (10.50.1.0/24)</a></li>
+    <li><a href="http://10.51.1.1/programmers">Not accessible to Accountants (10.51.1.0/24)</a></li>
+    <li><a href="http://10.52.1.1/programmers">Accessible to Administrators (10.52.1.0/24)</a></li>
+    <li><a href="http://10.53.1.1/programmers">Accessible to Programmers (10.53.1.0/24)</a></li>
+</ul>
+
+<h3>Administrators website:</h3>
+<ul>
+    <li><a href="http://10.50.1.1/administrators">Not accessible to Vendors (10.50.1.0/24)</a></li>
+    <li><a href="http://10.51.1.1/administrators">Not accessible to Accountants (10.51.1.0/24)</a></li>
+    <li><a href="http://10.52.1.1/administrators">Accessible to Administrators (10.52.1.0/24)</a></li>
+    <li><a href="http://10.53.1.1/administrators">Accessible to Programmers (10.53.1.0/24) but not *.gif and *.jpg files</a></li>
+</ul>
+
+  <hr>
+  <p><i>Note: Use the Ubuntu client to simulate IP access via subnet aliasing and test each rule accordingly.</i></p>
+</body>
+</html>
+
